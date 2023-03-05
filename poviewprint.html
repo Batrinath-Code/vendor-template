@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Vendor</title>
+  </head>
+  <body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a
+          class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
+          href="#"
+          >Logo</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavBar"
+          aria-controls="topNavBar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+          <form class="d-flex ms-auto my-3 my-lg-0">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-primary" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle ms-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-user"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav bg-light"
+      tabindex="-1"
+      id="sidebar"
+    >
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-lbg-light">
+          <ul class="navbar-nav">
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3">
+                CORE
+              </div>
+            </li>
+            <li>
+              <a href="postingnewproduct.html" class="nav-link px-3 active">
+                <span class="me-2"><i class="fa-solid fa-file"></i></span>
+                <span>Posting New Product</span>
+              </a>
+            </li>
+            <li>
+              <a href="poviewprint.html" class="nav-link px-3 active">
+                <span class="me-2"
+                  ><i class="fa-brands fa-product-hunt"></i
+                ></span>
+                <span>Product View/Print</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Product View/Print</h4>
+          </div>
+        </div>
+
+        <div class="row g-3 my-2 p-3 bg-white border border-1 rounded">
+          <div class="col-md-6">
+            <label for="inputPdName" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="inputPdName" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputPdValue" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="inputPdValue" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputdate" class="form-label">Date</label>
+            <input type="text" class="form-control" id="inputdate" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputEdd" class="form-label">EDD</label>
+            <input type="text" class="form-control" id="inputEdd" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputItemCode" class="form-label">Item Code</label>
+            <input type="text" class="form-control" id="inputItemCode" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputItemName" class="form-label">Item Name</label>
+            <input type="text" class="form-control" id="inputItemName" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputQty" class="form-label">Qty</label>
+            <input type="text" class="form-control" id="inputQty" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputRate" class="form-label">Rate</label>
+            <input type="text" class="form-control" id="inputRate" />
+          </div>
+          <div class="col-md-12">
+            <label for="formFile" class="form-label">Image</label>
+            <input class="form-control" type="file" id="formFile" />
+          </div>
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+          <div class="col-md-4">
+            <button  class="btn btn-warning">Upload</button>
+          </div>
+          <div class="col-md-4">
+            <button  class="btn btn-success">Print</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span> Data Table
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table
+                    id="example"
+                    class="table table-striped data-table"
+                    style="width: 100%"
+                  >
+                    <thead>
+                      <tr>
+                        <th>S.No</th>
+                        <th>Date</th>
+                        <th>Product Name</th>
+                        <th>Item Code</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>01-01-2020</td>
+                        <td>test Product</td>
+                        <td>0001</td>
+                        <td>250gm</td>
+                        <td>Rs:300</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01-01-2020</td>
+                        <td>test Product</td>
+                        <td>0001</td>
+                        <td>250gm</td>
+                        <td>Rs:300</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01-01-2020</td>
+                        <td>test Product</td>
+                        <td>0001</td>
+                        <td>250gm</td>
+                        <td>Rs:300</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01-01-2020</td>
+                        <td>test Product</td>
+                        <td>0001</td>
+                        <td>250gm</td>
+                        <td>Rs:300</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01-01-2020</td>
+                        <td>test Product</td>
+                        <td>0001</td>
+                        <td>250gm</td>
+                        <td>Rs:300</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01-01-2020</td>
+                        <td>test Product</td>
+                        <td>0001</td>
+                        <td>250gm</td>
+                        <td>Rs:300</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01-01-2020</td>
+                        <td>test Product</td>
+                        <td>0001</td>
+                        <td>250gm</td>
+                        <td>Rs:300</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>01-01-2020</td>
+                        <td>test Product</td>
+                        <td>0001</td>
+                        <td>250gm</td>
+                        <td>Rs:300</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th>S.No</th>
+                        <th>Date</th>
+                        <th>Product Name</th>
+                        <th>Item Code</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
