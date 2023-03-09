@@ -25,9 +25,15 @@ button {
   
   display: block;
 }
+.mobile-visible{
+  display: none;
+}
 @media (min-width: 992px) {
   .d-menu{
     display: none;
+  }
+  .mobile-visible{
+    display: block;
   }
   body {
     overflow: auto !important;

@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- top navigation bar -->
-    <nav class="navbar  bg-white fixed-top">
+    <nav class="navbar bg-white fixed-top">
       <div class="container-fluid">
         <button
           class="d-menu border-dark"
@@ -43,8 +43,8 @@
         >
           <i class="fa-solid fa-bars"></i>
         </button> -->
-        <div class="d-sm-flex justify-content-center align-items-center">
-          <form class="d-flex ms-auto my-3 my-lg-0">
+        <div class="d-md-flex justify-content-between align-items-start">
+          <form class="mobile-visible my-0 ">
             <div class="input-group">
               <input
                 class="form-control"
@@ -89,7 +89,7 @@
     >
       <div class="offcanvas-body p-0">
         <nav class="navbar-lbg-light">
-          <ul class="navbar-nav mt-sm-2">
+          <ul class="navbar-nav mt-5">
             <li>
               <div class="text-muted small fw-bold text-uppercase px-3">
                 CORE
@@ -122,36 +122,81 @@
           </div>
         </div>
 
-        <div class="row g-3 my-2 p-3 bg-white border border-1 rounded">
-          <div class="col-md-6">
-            <label for="inputPName" class="form-label">Product Name</label>
-            <input type="text" class="form-control" id="inputPName" />
-          </div>
-          <div class="col-md-6">
-            <label for="inputMRP" class="form-label">MRP</label>
-            <input type="text" class="form-control" id="inputMRP" />
-          </div>
-          <div class="col-md-6">
-            <label for="inputNetCost" class="form-label">Nest Cost</label>
-            <input type="text" class="form-control" id="inputNetCost" />
-          </div>
-          <div class="col-md-6">
-            <label for="inputMinQty" class="form-label">Min Qty</label>
-            <input type="text" class="form-control" id="inputMinQty" />
-          </div>
-          <div class="col-md-12">
-            <label for="formFile" class="form-label">Image</label>
-            <input class="form-control" type="file" id="formFile" />
-          </div>
-          <div class="col-md-4">
-            <button type="submit" class="btn btn-primary">Save</button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="addnewproduct"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addnewproductLabel">Save New Product</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body"><div class="row g-3 my-2 p-3 bg-white border border-1 rounded">
+                <div class="col-md-12">
+                  <label for="inputPName" class="form-label">Product Name</label>
+                  <input type="text" class="form-control" id="inputPName" />
+                </div>
+                <div class="col-md-4">
+                  <label for="inputMRP" class="form-label">MRP</label>
+                  <input type="text" class="form-control" id="inputMRP" />
+                </div>
+                <div class="col-md-4">
+                  <label for="inputNetCost" class="form-label">Nest Cost</label>
+                  <input type="text" class="form-control" id="inputNetCost" />
+                </div>
+                <div class="col-md-4">
+                  <label for="inputMinQty" class="form-label">Min Qty</label>
+                  <input type="text" class="form-control" id="inputMinQty" />
+                </div>
+                <div class="col-md-8">
+                  <label for="formFile" class="form-label">Image</label>
+                  <input class="form-control" type="file" id="formFile" />
+                </div>
+                <div class="col-md-4">
+                  <img src="..." class="img-thumbnail" alt="...">
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+              </div> </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row">
+
+
+        <div class="row g-3 ">
           <div class="col-md-12 mb-3">
-            <div class="card">
+            <div class="card ">
               <div class="card-header">
-                <span><i class="bi bi-table me-2"></i></span> Data Table
+                <button
+                  class="btn btn-success"
+                  data-bs-toggle="modal"
+                  data-bs-target="#addnewproduct"
+                >
+                  <i class="fa-solid fa-plus me-2"></i>Add Data
+                </button>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
