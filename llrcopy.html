@@ -134,7 +134,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="prprint.html" class="nav-link px-3"> 
+                    <a href="prprint.html" class="nav-link px-3">
                       <span class="me-2">PR Print</span>
                     </a>
                   </li>
@@ -155,7 +155,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <h4>Product View/Print</h4>
+            <h4>LLR Copy</h4>
           </div>
         </div>
         <!-- Modal -->
@@ -197,39 +197,24 @@
                           class="text-white"
                         >
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Item Code</th>
-                            <th scope="col">Item Name</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Netcost</th>
-                            <th scope="col">Amount</th>
+                            <th scope="col">S.No</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Desc</th>
+                            <th scope="col">LLR Recipt</th>
+                            <th scope="col">Transport</th>
+                            <th scope="col">Image</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <th scope="row">1</th>
-                            <td>001</td>
-                            <td>Paper</td>
+                            <td>01-01-2020</td>
+                            <td>Delivery</td>
                             <td>2</td>
-                            <td>$200</td>
-                            <td>$800</td>
+                            <td>Tn Transport</td>
+                            <td><img src="img/copyTrader.png" class="img-table" alt=""></td>
                           </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>002</td>
-                            <td>Web hosting</td>
-                            <td>1</td>
-                            <td>$10</td>
-                            <td>$10</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>003</td>
-                            <td>Consulting</td>
-                            <td>1 year</td>
-                            <td>$300</td>
-                            <td>$300</td>
-                          </tr>
+                          
                         </tbody>
                       </table>
                     </div>
@@ -278,7 +263,9 @@
         <div class="row">
           <div class="col-md-12 mb-3">
             <div class="card">
-             
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span> Data Table
+              </div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table
@@ -289,22 +276,23 @@
                     <thead>
                       <tr>
                         <th>S.No</th>
-                        <th>Po Date</th>
-                        <th>Po No</th>
-                        <th>Po Value</th>
-                        <th>Invoice No</th>
-                        <th>Invoice Date</th>
+                        <th>Date</th>
+                        <th>Desc</th>
+                        <th>LLR Recipt</th>
+                        <th>Transport</th>
+                        <th>Image</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
+                        
                       <tr>
-                        <td>1</td>
+                        <th scope="row">1</th>
                         <td>01-01-2020</td>
-                        <td>test Product</td>
-                        <td>0001</td>
-                        <td>250gm</td>
-                        <td>Rs:300</td>
+                        <td>Delivery</td>
+                        <td>2</td>
+                        <td>Tn Transport</td>
+                        <td><img class="img-table" src="/img/copyTrader.png" alt=""></td>
                         <td>
                           <button
                             class="btn btn-warning"
@@ -319,11 +307,10 @@
                     <tfoot>
                       <tr>
                         <th>S.No</th>
-                        <th>Po Date</th>
-                        <th>Po No</th>
-                        <th>Po Value</th>
-                        <th>Invoice No</th>
-                        <th>Invoice Date</th>
+                        <th>Pr Date</th>
+                        <th>Pr No</th>
+                        <th>Pr Value</th>
+                        <th>Status</th>
                         <th>Action</th>
                       </tr>
                     </tfoot>

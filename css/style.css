@@ -28,6 +28,10 @@ button {
 .mobile-visible{
   display: none;
 }
+.img-table{
+  width: 40px;
+  border-radius: 20%;
+}
 @media (min-width: 992px) {
   .d-menu{
     display: none;

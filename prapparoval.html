@@ -16,8 +16,8 @@
   </head>
   <body>
     <!-- top navigation bar -->
-    <nav class="navbar bg-light fixed-top">
-      <div class="container-fluid border-danger">
+    <nav class="navbar bg-white fixed-top">
+      <div class="container-fluid">
         <button
           class="d-menu border-dark"
           type="button"
@@ -97,7 +97,9 @@
             </li>
             <li>
               <a href="postingnewproduct.html" class="nav-link px-3 active">
-                <span class="me-2"><i class="fa-solid fa-circle-plus"></i></span>
+                <span class="me-2"
+                  ><i class="fa-solid fa-circle-plus"></i
+                ></span>
                 <span>Posting New Product</span>
               </a>
             </li>
@@ -124,24 +126,21 @@
                   </span>
                 </span>
               </a>
-              <div class="collapse " id="purchasereturn" >
-                <ul class="navbar-nav ps-3  border rounded m-1">
+              <div class="collapse" id="purchasereturn">
+                <ul class="navbar-nav ps-3 border rounded m-1">
                   <li>
                     <a href="prapparoval.html" class="nav-link px-3">
-                      <span class="me-2"
-                        >PR Image Approval</span>
+                      <span class="me-2">PR Image Approval</span>
                     </a>
                   </li>
                   <li>
                     <a href="prprint.html" class="nav-link px-3">
-                      <span class="me-2"
-                        >PR Print</span>
+                      <span class="me-2">PR Print</span>
                     </a>
                   </li>
                   <li>
                     <a href="llrcopy.html" class="nav-link px-3">
-                      <span class="me-2"
-                        >LLR Copy Listing</span>
+                      <span class="me-2">LLR Copy Listing</span>
                     </a>
                   </li>
                 </ul>
@@ -156,7 +155,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <h4>Posting New Product</h4>
+            <h4>Purchase Return Image Approval</h4>
           </div>
         </div>
 
@@ -172,7 +171,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="addnewproductLabel">
-                  Save New Product
+                  PR Image Details
                 </h5>
                 <button
                   type="button"
@@ -186,27 +185,27 @@
                   <div
                     class="row g-3 my-2 p-3 bg-white border border-1 rounded"
                   >
-                    <div class="col-md-12">
-                      <label for="inputPName" class="form-label"
-                        >Product Name</label
-                      >
-                      <input type="text" class="form-control" id="inputPName" />
-                    </div>
                     <div class="col-md-4">
-                      <label for="inputMRP" class="form-label">MRP</label>
-                      <input type="text" class="form-control" id="inputMRP" />
-                    </div>
-                    <div class="col-md-4">
-                      <label for="inputNetCost" class="form-label"
-                        >Nest Cost</label
+                      <label for="inputItCode" class="form-label"
+                        >Item Code</label
                       >
                       <input
                         type="text"
                         class="form-control"
-                        id="inputNetCost"
+                        id="inputItCode"
                       />
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-8">
+                      <label for="inputItName" class="form-label"
+                        >Item Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputItName"
+                      />
+                    </div>
+                    <div class="col-md-6">
                       <label for="inputMinQty" class="form-label"
                         >Min Qty</label
                       >
@@ -216,18 +215,36 @@
                         id="inputMinQty"
                       />
                     </div>
-                    <div class="col-md-8">
-                      <label for="formFile" class="form-label">Image</label>
-                      <input class="form-control" type="file" id="formFile" />
+                    <div class="col-md-6">
+                      <label for="inputNetCost" class="form-label"
+                        >Net Cost</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputNetCost"
+                      />
                     </div>
-                    <div class="col-md-4">
-                      <img src="..." class="img-thumbnail" alt="..." />
+                    <div class="col-md-12">
+                      <img src="..." class="img-fluid" alt="..." />
+                    </div>
+                    <div class="col-md-12">
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label"
+                        >Reason for Declined</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                      ></textarea>
                     </div>
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="reset" class="btn btn-secondary">Clear</button>
-                  <button type="button" class="btn btn-primary">Save</button>
+                  <button type="reset" class="btn btn-success">Approved</button>
+                  <button type="button" class="btn btn-danger">Declined</button>
                 </div>
               </form>
             </div>
@@ -238,15 +255,17 @@
         <div class="row g-3">
           <div class="col-md-12 mb-3">
             <div class="card">
-              <div class="card-header">
-                <button
-                  class="btn btn-success"
-                  data-bs-toggle="modal"
-                  data-bs-target="#addnewproduct"
-                >
-                  <i class="fa-solid fa-plus me-2"></i>Add Data
-                </button>
-              </div>
+                <div class="card-header">
+                    <form class="row">
+                        <div class="col-md-2">
+                            <select class="form-select border-warning" aria-label="Default select example">
+                                <option value="pending" selected>Pending</option>
+                                <option value="approved">Approved</option>
+                                <option value="rejected">Rejected</option>
+                              </select>
+                        </div>
+                    </form>
+                </div>
               <div class="card-body">
                 <div class="table-responsive">
                   <table
@@ -258,9 +277,10 @@
                       <tr>
                         <th>S.No</th>
                         <th>Date</th>
-                        <th>Ref No</th>
+                        <th>Item Code</th>
                         <th>Item Name</th>
-                        <th>Status</th>
+                        <th>Qty</th>
+                        <th>Image</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -270,114 +290,20 @@
                         <td>01-01-2020</td>
                         <td>0001</td>
                         <td>Item1</td>
-                        <td>Pending</td>
+                        <td>3</td>
                         <td>
-                          <button class="btn btn-success">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-                          <button class="btn btn-danger">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
+                          <img
+                            src="img/copyTrader.png"
+                            class="img-table"
+                            alt=""
+                          />
                         </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>01-01-2020</td>
-                        <td>0001</td>
-                        <td>Item1</td>
-                        <td>Pending</td>
                         <td>
-                          <button class="btn btn-success">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-                          <button class="btn btn-danger">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>01-01-2020</td>
-                        <td>0001</td>
-                        <td>Item1</td>
-                        <td>Pending</td>
-                        <td>
-                          <button class="btn btn-success">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-                          <button class="btn btn-danger">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>01-01-2020</td>
-                        <td>0001</td>
-                        <td>Item1</td>
-                        <td>Pending</td>
-                        <td>
-                          <button class="btn btn-success">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-                          <button class="btn btn-danger">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>01-01-2020</td>
-                        <td>0001</td>
-                        <td>Item1</td>
-                        <td>Pending</td>
-                        <td>
-                          <button class="btn btn-success">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-                          <button class="btn btn-danger">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>01-01-2020</td>
-                        <td>0001</td>
-                        <td>Item1</td>
-                        <td>Pending</td>
-                        <td>
-                          <button class="btn btn-success">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-                          <button class="btn btn-danger">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>01-01-2020</td>
-                        <td>0001</td>
-                        <td>Item1</td>
-                        <td>Pending</td>
-                        <td>
-                          <button class="btn btn-success">
-                            <i class="fa-solid fa-pen"></i>
-                          </button>
-                          <button class="btn btn-danger">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>01-01-2020</td>
-                        <td>0001</td>
-                        <td>Item1</td>
-                        <td>Pending</td>
-                        <td>
-                          <button class="btn btn-success">
+                          <button
+                            class="btn btn-success"
+                            data-bs-toggle="modal"
+                            data-bs-target="#addnewproduct"
+                          >
                             <i class="fa-solid fa-pen"></i>
                           </button>
                           <button class="btn btn-danger">
@@ -390,9 +316,10 @@
                       <tr>
                         <th>S.No</th>
                         <th>Date</th>
-                        <th>Ref No</th>
+                        <th>Item Code</th>
                         <th>Item Name</th>
-                        <th>Status</th>
+                        <th>Qty</th>
+                        <th>Image</th>
                         <th>Action</th>
                       </tr>
                     </tfoot>
